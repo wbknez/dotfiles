@@ -1,0 +1,10 @@
+[user]
+	name = Will Knez
+	email = wbknez.dev@gmail.com
+[core]
+	editor = emacsclient -t
+	autocrlf = false
+	safecrlf = true
+	excludesfile = ~/.gitignore.global
+[include]
+	path = ~/.gitconfig.local
