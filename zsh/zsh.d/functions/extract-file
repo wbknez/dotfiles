@@ -11,6 +11,7 @@
 
 if [[ ! -f $1 ]]; then
     echo "'$1' is not an extractable file."
+    exit
 fi
 
 case $1 in
