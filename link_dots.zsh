@@ -1,10 +1,16 @@
 #!/usr/bin/env zsh
 #
-# Summary: This file contains 
+# Summary: Links, or installs, all of the dotfiles in this repository to their
+# intended locations in the HOME directory.
+#
+# Arguments:
+#   --overwrite - Force this script to overwrite any dot files or links that
+#   already exist.
 
 # Print usage if needed.
 if [[ $1 == "--help" ]]; then
-    echo "install_dots [ARGS]"
+    echo "link_dots [ARGS]..."
+    echo "Link dotfiles for numerous services to this user's home directory."
     echo ""
     echo "    --help         Print this message."
     echo "    --overwrite    Forcefully delete existing links."
