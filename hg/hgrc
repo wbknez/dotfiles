@@ -1,0 +1,29 @@
+# -*- mode: conf[unix] -*-
+#
+# Summary: Mercurial configuration file.
+
+[alias]
+amenda = commit --amend
+co = commit -m
+glog = glog -l 10 --template "{rev}:[{branch} {bookmarks}] {author|user}: \"{desc}\"\n"
+last = log -l 5 --style compact
+nudge = push -r .
+preview = merge --preview
+repull = pull --rebase
+switch = update -C
+untrack = rm -Af
+
+[extensions]
+color =
+graphlog =
+mq =
+rebase =
+shelve =
+
+hgext.fetch =
+hggit =
+
+[ui]
+ignore = ~/.hgignore.global
+
+%include ~/.hgrc.local
