@@ -1,0 +1,5 @@
+# -*- mode: R -*-
+#
+# Summary: Initializes all relevant R environment variables.
+
+R_LIBS = "~/.local/share/R"
