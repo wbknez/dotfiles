@@ -192,5 +192,3 @@ $RECYCLE.BIN/
 */.git/*
 *.gitignore
 *.gitconfig
-
-# vim: set ft=hgignore
