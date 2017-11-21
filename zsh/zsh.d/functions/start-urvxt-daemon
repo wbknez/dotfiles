@@ -1,0 +1,12 @@
+# -*- mode: shell-script[zsh] -*-
+#
+# This is a function to check if the URXVT daemon is currently running.
+#
+# If this function is called and URXVT is not running then it will start it;
+# otherwise, nothing happens.  This function's main purpose is to prohibit
+# multiple copies of the daemon from being started, usually due to reloading
+# the windowing system's configuration file repeatedly.
+
+if ! pgrep -xU will urxvtd >/dev/null 2>&1; then
+    urxvt256cd --fork --opendisplay --quiet
+fi
