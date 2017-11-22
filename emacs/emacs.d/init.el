@@ -25,6 +25,7 @@
 (require 'coding-customize)
 (require 'editing-customize)
 (require 'interface-customize)
+(require 'spelling-customize)
 
 ;; Load custom variables.
 (setq custom-file "~/.emacs.d/custom.el")
