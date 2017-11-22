@@ -8,15 +8,6 @@
 ;; Show closing parens.
 (show-paren-mode 1)
 
-;; Disable all menus, toolbars, and mouse interface(s) except if we are using
-;; our laptop (OSX).
-(when (fboundp 'tool-bar-mode)
-  (tool-bar-mode -1))
-(when (unless (eq system-type 'darwin) (fboundp 'menu-bar-mode))
-  (menu-bar-mode -1))
-(when (fboundp 'scroll-bar-mode)
-  (scroll-bar-mode -1))
-
 ;; Disable blinking cursor.
 (blink-cursor-mode 1)
 
