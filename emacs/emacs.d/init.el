@@ -24,6 +24,7 @@
 ;; Load other customizations.
 (require 'coding-customize)
 (require 'editing-customize)
+(require 'interface-customize)
 
 ;; Load custom variables.
 (setq custom-file "~/.emacs.d/custom.el")
