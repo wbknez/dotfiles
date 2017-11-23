@@ -7,6 +7,7 @@
 #   $1 - The name of the configuration file without an extension.
 #   $2 - The folder (located beneath ZSH) in which the file resides.
 #   $3 - Any additional arguments to pass to the configuration file (optional).
+
 function use-config() {
     local config_file="$1"
     local folder="$2"
@@ -23,6 +24,6 @@ function use-config() {
     if [[ -f ${filename} ]]; then
 	source ${filename} ${arguments}
     else
-	warn-msg "load-config: Could not load ${filename}... skipping."
+	warn-msg "(use-config) Could not load ${filename}... skipping."
     fi
 }

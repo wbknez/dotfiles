@@ -6,8 +6,8 @@ if [[ ! -z "$RB_ENV_HOME" && -d "$RB_ENV_HOME" ]]; then
     path=($RB_ENV_HOME/bin $path)
     eval "$(rbenv init -)"
 else
-    warn-msg "Could not find RB_ENV_HOME."
-    warn-msg "Failed to initialize Ruby configuration for ZSH."
+    warn-msg "(ruby) Could not find RB_ENV_HOME."
+    warn-msg "(ruby) Failed to initialize Ruby configuration for ZSH."
 fi
 
 alias rbinst='rbenv install'

@@ -14,4 +14,5 @@ use-config keybindings shell
 use-config prompt      shell
 
 use-config functions   shell/extra
+use-config R           shell/extra
 use-config ruby        shell/extra
