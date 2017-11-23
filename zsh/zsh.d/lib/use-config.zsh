@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+# -*- mode: shell-script[zsh] -*-
 #
 # Attempts to source a configuration file located in a directory beneath
 # ZSH_CONFIG_DIR and passes any additional arguments specified.
@@ -23,7 +23,6 @@ function use-config() {
     if [[ -f ${filename} ]]; then
 	source ${filename} ${arguments}
     else
-	echo -e " \e[1;31m*\e[0m load-config: Could not load ${filename}" \
-	        "... skipping."
+	warn-msg "load-config: Could not load ${filename}... skipping."
     fi
 }
