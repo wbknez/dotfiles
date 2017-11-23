@@ -10,6 +10,6 @@ if [[ ! -d $R_LIBS ]]; then
     mkdir $R_LIBS
 fi
 
-alias R='R --no-restore --no-save'
+alias R='/usr/bin/R --no-restore --no-save'
 alias Rs='/usr/bin/Rscript'
 alias Rw='/usr/bin/R'
