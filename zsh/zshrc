@@ -4,10 +4,14 @@
 
 [[ -z "$PS1" ]] && return
 
-source $ZSH_CONFIG_DIR/shell/use-config.zsh
+source $ZSH_CONFIG_DIR/lib/messages.zsh
+source $ZSH_CONFIG_DIR/lib/use-config.zsh
 
 use-config aliases     shell
 use-config completion  shell
 use-config history     shell
 use-config keybindings shell
 use-config prompt      shell
+
+use-config functions   shell/extra
+use-config ruby        shell/extra
