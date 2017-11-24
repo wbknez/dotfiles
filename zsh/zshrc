@@ -13,6 +13,7 @@ use-config history     shell
 use-config keybindings shell
 use-config prompt      shell
 
+use-config emacs       shell/extra
 use-config functions   shell/extra
 use-config python      shell/extra
 use-config R           shell/extra
