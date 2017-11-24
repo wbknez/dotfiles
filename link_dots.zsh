@@ -33,6 +33,11 @@ source "install_scripts/check_directory_structure.zsh"
 echo "Checking directory structure..."
 check_directory_structure $FORCE
 
+# Emacs configuration.
+echo "Linking Emacs configuration..."
+check_and_link .emacs.d emacs/emacs.d
+check_and_link .config/systemd/user/emacs.service emacs/emacs.service
+
 # Git configuration.
 echo "Linking Git configuration..."
 
