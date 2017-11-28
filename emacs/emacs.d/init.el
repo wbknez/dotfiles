@@ -30,6 +30,8 @@
 ;; Load extras.
 ;; This is primarily language support.
 (require 'groovy-extra)
+(require 'markdown-extra)
+(require 'toml-extra)
 (require 'yaml-extra)
 
 ;; Load custom variables.
