@@ -30,6 +30,7 @@
 ;; Load extras.
 ;; This is primarily language support.
 (require 'groovy-extra)
+(require 'yaml-extra)
 
 ;; Load custom variables.
 (setq custom-file "~/.emacs.d/custom.el")
