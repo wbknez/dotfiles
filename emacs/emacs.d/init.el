@@ -27,6 +27,10 @@
 (require 'interface-customize)
 (require 'spelling-customize)
 
+;; Load extras.
+;; This is primarily language support.
+(require 'groovy-extra)
+
 ;; Load custom variables.
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
