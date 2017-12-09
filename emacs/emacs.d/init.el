@@ -11,12 +11,15 @@
 ;; Load paths to custom script location(s).
 ;;
 ;; Custom scripts are in ~/.emacs.d/lisp.
-;; Custom language and UI scripts are in ~/.emacs.d/lisp/extra
+;;    Custom tool scripts are in ~/emacs.d/lisp/extra-tools
+;;    Custom language scripts are in ~/.emacs.d/lisp/lang
 ;; Theme scripts are in ~/.emacs.d/themes
 (add-to-list 'load-path
              (expand-file-name "lisp" user-emacs-directory))
 (add-to-list 'load-path
-	     (expand-file-name "lisp/extra" user-emacs-directory))
+             (expand-file-name "lisp/extra-tools" user-emacs-directory))
+(add-to-list 'load-path
+	     (expand-file-name "lisp/lang" user-emacs-directory))
 
 ;; Load utility script(s).
 (require 'bootstrap-use-package)
@@ -27,13 +30,15 @@
 (require 'interface-customize)
 (require 'spelling-customize)
 
-;; Load extras.
-;; This is primarily language support.
-(require 'groovy-extra)
-(require 'latex-local-extra)
-(require 'markdown-extra)
-(require 'toml-extra)
-(require 'yaml-extra)
+;; Load language-specific support.
+(require 'groovy-lang)
+(require 'latex-lang)
+(require 'markdown-lang)
+(require 'toml-lang)
+(require 'yaml-lang)
+
+;; Load tool-specific support.
+(require 'git-extra-tools)
 
 ;; Load custom variables.
 (setq custom-file "~/.emacs.d/custom.el")
