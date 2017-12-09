@@ -6,6 +6,7 @@
   :ensure t
   :mode ("\\.yasnippet\\'" . snippet-mode)
   :init
+  (yas-global-mode)
   )
 
 (provide 'snippet-extra-tools)
