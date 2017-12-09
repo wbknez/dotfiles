@@ -39,6 +39,7 @@
 
 ;; Load tool-specific support.
 (require 'git-extra-tools)
+(require 'snippet-extra-tools)
 
 ;; Load custom variables.
 (setq custom-file "~/.emacs.d/custom.el")
