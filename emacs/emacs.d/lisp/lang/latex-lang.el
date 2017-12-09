@@ -23,4 +23,4 @@
    )
   )
 
-(provide 'latex-local-extra)
+(provide 'latex-lang)

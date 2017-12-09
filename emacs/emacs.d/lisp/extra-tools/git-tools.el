@@ -7,3 +7,5 @@
 
   :init
   (global-set-key (kbd "C-x g") 'magit-status))
+
+(provide 'git-extra-tools)

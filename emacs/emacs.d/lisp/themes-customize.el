@@ -69,4 +69,4 @@
 ;; Warm Night theme.
 (use-package warm-night-theme :ensure t :defer t)
 
-(provide 'themes-extra)
+(provide 'themes-customize)

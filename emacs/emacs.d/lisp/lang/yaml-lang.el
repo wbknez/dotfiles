@@ -4,4 +4,4 @@
 
 (use-package yaml-mode :ensure t)
 
-(provide 'yaml-extra)
+(provide 'yaml-lang)

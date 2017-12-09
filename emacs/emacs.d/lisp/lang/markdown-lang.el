@@ -16,4 +16,4 @@
    markdown-enable-math t      ;;
   ))
 
-(provide 'markdown-extra)
+(provide 'markdown-lang)

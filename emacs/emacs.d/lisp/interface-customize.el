@@ -14,7 +14,7 @@
 ;; Graphical configuration.
 (when (display-graphic-p)
   ;; Ensure all themes are present.
-  (require 'themes-extra)
+  (require 'themes-customize)
 
     ;; Default fonts on Windows, OSX, and Linux.
   (cond ((eq system-type 'windows-nt)

@@ -6,4 +6,4 @@
 (use-package groovy-mode :ensure t :defer nil
   :mode ("\\.gradle\\'" . groovy-mode))
 
-(provide 'groovy-extra)
+(provide 'groovy-lang)
