@@ -30,16 +30,17 @@
 (require 'interface-customize)
 (require 'spelling-customize)
 
+;; Load tool-specific support.
+(require 'git-extra-tools)
+(require 'snippet-extra-tools)
+
 ;; Load language-specific support.
 (require 'groovy-lang)
 (require 'latex-lang)
 (require 'markdown-lang)
+(require 'scss-lang)
 (require 'toml-lang)
 (require 'yaml-lang)
-
-;; Load tool-specific support.
-(require 'git-extra-tools)
-(require 'snippet-extra-tools)
 
 ;; Load custom variables.
 (setq custom-file "~/.emacs.d/custom.el")
