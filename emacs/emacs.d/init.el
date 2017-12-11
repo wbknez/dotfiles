@@ -28,6 +28,7 @@
 (require 'coding-customize)
 (require 'editing-customize)
 (require 'interface-customize)
+(require 'organization-customize)
 (require 'spelling-customize)
 
 ;; Load tool-specific support.
