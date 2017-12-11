@@ -1,3 +1,5 @@
+;;; -*- mode: Emacs Lisp -*-
+;;
 ;;; Summary: Initialize formatting and editing configuration options for Emacs.
 
 ;; Spaces only.

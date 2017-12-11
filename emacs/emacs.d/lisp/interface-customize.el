@@ -1,3 +1,5 @@
+;;; -*- mode: Emacs Lisp -*-
+;;
 ;;; Summary: Initialize configuration options concerning the editor itself.
 ;;;
 ;;; These options apply only to the graphical editor (i.e. XEmacs).
