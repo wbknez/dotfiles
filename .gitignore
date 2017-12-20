@@ -1,4 +1,5 @@
 emacs/emacs.d/auto-save-list
+emacs/emacs.d/custom.el
 emacs/emacs.d/elpa
 emacs/emacs.d/network-*
-emacs/emacs.d/custom.el
+emacs/emacs.d/org-notes
