@@ -36,6 +36,7 @@
 (require 'snippet-extra-tools)
 
 ;; Load language-specific support.
+(require 'cpp-lang)
 (require 'groovy-lang)
 (require 'latex-lang)
 (require 'markdown-lang)
