@@ -1,0 +1,39 @@
+#!/bin/sh
+
+DEFAULT_SESSION="i3"
+DEFAULT_RESOURCES="$HOME/.Xresources"
+
+# Custom resource file, mostly used for testing without
+# contaminating the main file.
+CUSTOM_RESOURCES=""
+
+# Redirect errors to a file in user's home directory.
+for errfile in "$HOME/.wm-errors" "${TMPDIR-/tmp}/wm-$USER" "/tmp/wm-$USER"
+do
+	if ( cp /dev/null "$errfile" 2> /dev/null )
+	then
+		chmod 600 "$errfile"
+		exec > "$errfile" 2>&1
+		break
+	fi
+done
+
+# Merge default resources if available.
+if [ -f "$DEFAULT_RESOURCES" ]; then
+	xrdb -merge "$DEFAULT_RESOURCES"
+fi
+
+# Overlay custom resources if applicable.
+if [ -f "$CUSTOM_RESOURCES" ]; then
+	xrdb -merge "$CUSTOM_RESOURCES"
+fi
+
+# Set the expected mouse cursor.
+xsetroot -cursor_name left_ptr
+
+# Fire up the window manager.
+case $1 in
+	i3)
+		exec $1
+		;;
+esac
