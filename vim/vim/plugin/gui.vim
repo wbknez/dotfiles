@@ -1,10 +1,13 @@
+" Graphical user interface options (for GVim and Oni).
+
 if has("gui_running")
     
     " Set the colorscheme.
     "
     " Use a system default if the desired one is not currently installed.
     try
-        colorscheme paper
+        set background=light
+        colorscheme PaperColor 
     catch
         colorscheme desert
     endtry
@@ -16,17 +19,13 @@ if has("gui_running")
         set guifont=Consolas:h11:cANSI
     endif
 
-    " Remove widgets from user interface.
-    set guioptions-=m   " Menu bar.
-    set guioptions-=T   " Tool bar.
-    set guioptions-=l   " Scroll bar (left).
-    set guioptions-=r   " Scroll bar (right).
-    set guioptions=L    " Scroll bar (upper left).
+    set guioptions-=m   " Remove the menu bar.
+    set guioptions-=T   " Remove the tool bar.
+    set guioptions-=l   " Remove the scroll bar (left).
+    set guioptions-=r   " Remove the scroll bar (right).
+    set guioptions=L    " Remove the scroll bar (upper left).
 
-    " Try and remove space from the bottom of the editing window.
-    set guiheadroom=0
-
-    " Mimic the size of a standard terminal.
-    set columns=80
-    set lines=40
+    set guiheadroom=0   " Remove the space from the bottom of the window.
+    set columns=80      " The number of columns to display.
+    set lines=40        " The number of rows to display.
 endif
