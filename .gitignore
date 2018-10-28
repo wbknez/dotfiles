@@ -6,3 +6,6 @@ emacs/emacs.d/network-*
 emacs/emacs.d/org-notes
 emacs/emacs.d/semanticdb
 emacs/emacs.d/session.*
+
+vim/vim/autoload
+vim/vim/plugged
