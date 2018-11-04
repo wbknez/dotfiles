@@ -26,6 +26,6 @@ if has("gui_running")
     set guioptions=L    " Remove the scroll bar (upper left).
 
     set guiheadroom=0   " Remove the space from the bottom of the window.
-    set columns=80      " The number of columns to display.
-    set lines=40        " The number of rows to display.
+    set columns=85      " The number of columns to display.
+    set lines=50        " The number of rows to display.
 endif
