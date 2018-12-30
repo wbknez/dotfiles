@@ -20,7 +20,7 @@ sol.sys <- new.env()
 sol.sys$fixLibraryPath <- function(localLib) {
     os <- .Platform$OS.type
     paths <- .libPaths()
-
+    
     if(identical(os, "unix") && !is.element(localLib, paths)) {
         .libPaths(c(localLib, paths))
     }
