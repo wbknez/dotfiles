@@ -6,7 +6,7 @@ URxvt.foreground:               #ffffff
 
 ! Urxvt configuration.
 URxvt.cursorBlink:              false
-URxvt.font:                     xft:fira mono:size=11
+URxvt.font:                     xft:fira mono:size=13
 URxvt.internalBorder:           8
 URxvt.letterSpace:              -1
 URxvt.mouseWheelScrollPage:     true
