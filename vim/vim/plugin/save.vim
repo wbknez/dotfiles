@@ -5,11 +5,11 @@ set undofile                " Enable undo files.
 set directory=$HOME/.local/share/vim/swap// " The directory for backup files.
 set undodir=$HOME/.local/share/vim/undo//   " The directory for undo files.
 
-if !isDirectory(&directory)
+if !isdirectory(&directory)
     call mkdir(&directory, 'p')
 endif
 
-if !isDirectory(&undodir)
+if !isdirectory(&undodir)
     call mkdir(&undodir, 'p')
 endif
 
