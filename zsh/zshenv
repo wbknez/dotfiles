@@ -9,6 +9,7 @@ BIN_DIR="$HOME/bin"
 
 export ALTERNATE_EDITOR=""
 export BROWSER="/usr/bin/firefox"
+export CONDA_HOME="$APP_DIR/Conda"
 export EDITOR="/usr/bin/emacsclient -t"
 export GRADLE_HOME="$APP_DIR/Gradle"
 export M2_HOME="$APP_DIR/Maven"
@@ -28,4 +29,4 @@ typeset -gxU fpath FPATH
 typeset -gxU path PATH
 
 fpath=($ZSH_CONFIG_DIR/functions $fpath)
-path=($BIN_DIR $path)
+path=($BIN_DIR $CONDA_HOME/bin $path)
