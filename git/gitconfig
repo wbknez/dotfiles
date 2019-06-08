@@ -2,7 +2,7 @@
 	name = Will Knez
 	email = wbknez.dev@gmail.com
 [core]
-	editor = emacsclient -t
+	editor = vim 
 	autocrlf = false
 	safecrlf = true
 	excludesfile = ~/.gitignore.global
