@@ -1,6 +1,6 @@
 # Summary: Initialze all general-use aliases for ZSH.
 
-alias ls=' ls --color=auto'
+alias ls=' ls --color=auto --group-directories-first --format=horizontal'
 alias ll='ls -la'
 alias l.='ls -d .*'
 
