@@ -7,7 +7,7 @@
 # This function may be also be called to reload NVM in a current shell.
 function nvm-load() {
     if [[ -s "$NVM_DIR/nvm.sh" ]]; then
-        source "$NVM_DIR/nvm.sh"
+        source "$NVM_DIR/nvm.sh" --no-use
     else
         error-msg "NVM is not installed."
     fi

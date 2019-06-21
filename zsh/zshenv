@@ -15,7 +15,7 @@ export GRADLE_HOME="$APP_DIR/Gradle"
 export M2_HOME="$APP_DIR/Maven"
 export M2="$M2_HOME/bin"
 export LESS="-R -M -# 5"
-export NVM_DIR="$HOME/.nvm"
+export NVM_DIR="${XDG_CONFIG_HOME}/nvm"
 export PAGER="/usr/bin/less"
 export R_LIBS="$HOME/.local/share/R"
 export RB_ENV_HOME="$HOME/.rbenv"
@@ -29,4 +29,4 @@ typeset -gxU fpath FPATH
 typeset -gxU path PATH
 
 fpath=($ZSH_CONFIG_DIR/functions $fpath)
-path=($BIN_DIR $CONDA_HOME/bin $path)
+path=($BIN_DIR $CONDA_HOME/bin $GRADLE_HOME/bin $M2 $path)
