@@ -39,7 +39,7 @@ fi
 if [[ $UID != 0 ]]; then
     user_prompt="%{$fg_bold[white]%}>%{$reset_color%}"
 else
-    user_prompt="%{fg_bold[red]%}>%{$reset_color%}"
+    user_prompt="%{$fg_bold[red]%}>%{$reset_color%}"
 fi
 
 # (3) Determine VCS information.
