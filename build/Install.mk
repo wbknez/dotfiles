@@ -18,6 +18,13 @@ install-git:
 		-DEMAIL=$(EMAIL) \
 		git/gitconfig.m4 > $(HOME)/.gitconfig
 
+.PHONY: install-ssh
+install-ssh:
+	mkdir -p $(HOME)/.ssh
+	cp -p -- ssh/config $(HOME)/.ssh/config
+	chmod 0700 $(HOME)/.ssh
+	chmod 0600 $(HOME)/.ssh/config
+
 .PHONY: install-xdg
 install-xdg:
 	mkdir -p $(HOME)/.cache
