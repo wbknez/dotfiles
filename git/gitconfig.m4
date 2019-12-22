@@ -1,8 +1,10 @@
+define(NAME)dnl
+define(EMAIL)dnl
 [user]
-	name = Will Knez
-	email = wbknez.dev@gmail.com
+	name = NAME
+	email = EMAIL
 [core]
-	editor = vim 
+	editor = nvim 
 	autocrlf = false
 	safecrlf = true
 	excludesfile = ~/.gitignore.global
