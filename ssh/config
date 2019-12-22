@@ -1,0 +1,20 @@
+Host *
+	BatchMode no
+	CheckHostIP yes
+	Compression yes
+	ExitOnForwardFailure yes
+	ForwardAgent no
+	ForwardX11 no
+	ForwardX11Trusted no
+	HashKnownHosts yes
+	HostbasedAuthentication no
+	LogLevel INFO
+	NumberOfPasswordPrompts 1
+	PasswordAuthentication yes
+	PermitLocalCommand no
+	PreferredAuthentications publickey,password
+	Protocol 2
+	ServerAliveInterval 60
+	ServerAliveCountMax 10
+	StrictHostKeyChecking ask
+	VisualHostKey no
