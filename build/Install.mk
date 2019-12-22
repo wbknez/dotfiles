@@ -1,32 +1,33 @@
 .POSIX:
 
 NAME = 'Will Knez'
-EMAIL = 'wbknez.dev@gmail.com'
+EMAIL = 'wbknez.devgmail.com'
 
 .PHONY: install-fish
 install-fish: install-xdg
-	mkdir -p $(HOME)/.config/fish
-	cp -p -- fish/config.fish $(HOME)/.config/fish
-	cp -pr -- fish/conf.d $(HOME)/.config/fish
-	cp -pr -- fish/functions $(HOME)/.config/fish
+	@mkdir -pv -- $(HOME)/.config/fish
+	@cp -pv -- fish/config.fish $(HOME)/.config/fish
+	@cp -prv -- fish/conf.d $(HOME)/.config/fish
+	@cp -prv -- fish/functions $(HOME)/.config/fish
 
 .PHONY: install-git
 install-git:
-	cp -p -- git/gitignore.global $(HOME)/.gitignore.global
-	m4 -EQ \
+	@cp -pv -- git/gitignore.global $(HOME)/.gitignore.global
+	@m4 -EQ \
 		-DNAME=$(NAME) \
 		-DEMAIL=$(EMAIL) \
-		git/gitconfig.m4 > $(HOME)/.gitconfig
+		git/gitconfig.m4 > $(HOME)/.gitconfig && \
+		echo "'git/gitconfig.m4' -> '${HOME}/.gitconfig'"
 
 .PHONY: install-ssh
 install-ssh:
-	mkdir -p $(HOME)/.ssh
-	cp -p -- ssh/config $(HOME)/.ssh/config
-	chmod 0700 $(HOME)/.ssh
-	chmod 0600 $(HOME)/.ssh/config
+	@mkdir -pv -- $(HOME)/.ssh
+	@cp -pv -- ssh/config $(HOME)/.ssh/config
+	@chmod -v -- 0700 $(HOME)/.ssh
+	@chmod -v -- 0600 $(HOME)/.ssh/config
 
 .PHONY: install-xdg
 install-xdg:
-	mkdir -p $(HOME)/.cache
-	mkdir -p $(HOME)/.config
-	mkdir -p $(HOME)/.local/share
+	@mkdir -pv -- $(HOME)/.cache
+	@mkdir -pv -- $(HOME)/.config
+	@mkdir -pv -- $(HOME)/.local/share
