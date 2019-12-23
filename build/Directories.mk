@@ -4,6 +4,8 @@
 directories-home:
 	@mkdir -pv -- $(HOME)/Apps
 	@mkdir -pv -- $(HOME)/Build
+	@mkdir -pv -- $(HOME)/Documents
+	@mkdir -pv -- $(HOME)/Downloads
 	@mkdir -pv -- $(HOME)/Projects
 
 .PHONY: directories-xdg

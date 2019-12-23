@@ -12,7 +12,7 @@ install-fish: directories-xdg
 
 .PHONY: install-git
 install-git:
-	@cp -pv -- git/gitignore.global $(HOME)
+	@cp -pv -- git/gitignore.global $(HOME)/.gitignore.global
 	@m4 -EQ \
 		-DNAME=$(NAME) \
 		-DEMAIL=$(EMAIL) -- \
