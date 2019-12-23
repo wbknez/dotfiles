@@ -12,12 +12,21 @@ install-fish: install-xdg
 
 .PHONY: install-git
 install-git:
-	@cp -pv -- git/gitignore.global $(HOME)/.gitignore.global
+	@cp -pv -- git/gitignore.global $(HOME)
 	@m4 -EQ \
 		-DNAME=$(NAME) \
-		-DEMAIL=$(EMAIL) \
+		-DEMAIL=$(EMAIL) -- \
 		git/gitconfig.m4 > $(HOME)/.gitconfig && \
 		echo "'git/gitconfig.m4' -> '${HOME}/.gitconfig'"
+
+.PHONY: install-nvim
+install-nvim:
+	@mkdir -pv -- $(HOME)/.config/nvim
+	@cp -pv -- nvim/init.vim $(HOME)/.config/nvim
+	@cp -prv -- nvim/ftdetect $(HOME)/.config/nvim
+	@cp -prv -- nvim/ftplugin $(HOME)/.config/nvim
+	@cp -prv -- nvim/plugin $(HOME)/.config/nvim
+	@cp -prv -- nvim/spell $(HOME)/.config/nvim
 
 .PHONY: install-ssh
 install-ssh:
