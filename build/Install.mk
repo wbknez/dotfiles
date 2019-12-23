@@ -4,7 +4,7 @@ NAME = 'Will Knez'
 EMAIL = 'wbknez.devgmail.com'
 
 .PHONY: install-fish
-install-fish: install-xdg
+install-fish: directories-xdg
 	@mkdir -pv -- $(HOME)/.config/fish
 	@cp -pv -- fish/config.fish $(HOME)/.config/fish
 	@cp -prv -- fish/conf.d $(HOME)/.config/fish
@@ -20,7 +20,7 @@ install-git:
 		echo "'git/gitconfig.m4' -> '${HOME}/.gitconfig'"
 
 .PHONY: install-nvim
-install-nvim:
+install-nvim: directories-xdg
 	@mkdir -pv -- $(HOME)/.config/nvim
 	@cp -pv -- nvim/init.vim $(HOME)/.config/nvim
 	@cp -prv -- nvim/ftdetect $(HOME)/.config/nvim
@@ -35,8 +35,3 @@ install-ssh:
 	@chmod -v -- 0700 $(HOME)/.ssh
 	@chmod -v -- 0600 $(HOME)/.ssh/config
 
-.PHONY: install-xdg
-install-xdg:
-	@mkdir -pv -- $(HOME)/.cache
-	@mkdir -pv -- $(HOME)/.config
-	@mkdir -pv -- $(HOME)/.local/share
