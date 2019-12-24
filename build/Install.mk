@@ -5,10 +5,10 @@ EMAIL = 'wbknez.devgmail.com'
 
 .PHONY: install-fish
 install-fish: directories-xdg
-	@mkdir -pv -- $(HOME)/.config/fish
-	@cp -pv -- fish/config.fish $(HOME)/.config/fish
-	@cp -prv -- fish/conf.d $(HOME)/.config/fish
-	@cp -prv -- fish/functions $(HOME)/.config/fish
+	@mkdir -pv -- $(CONFIG_DIR)/fish
+	@cp -pv -- fish/config.fish $(CONFIG_DIR)/fish
+	@cp -prv -- fish/conf.d $(CONFIG_DIR)/fish
+	@cp -prv -- fish/functions $(CONFIG_DIR)/fish
 
 .PHONY: install-git
 install-git:
@@ -17,21 +17,21 @@ install-git:
 		-DNAME=$(NAME) \
 		-DEMAIL=$(EMAIL) -- \
 		git/gitconfig.m4 > $(HOME)/.gitconfig && \
-		echo "'git/gitconfig.m4' -> '${HOME}/.gitconfig'"
+		echo "'git/gitconfig.m4' -> '$(HOME)/.gitconfig'"
 
 .PHONY: install-nvim
 install-nvim: directories-xdg
-	@mkdir -pv -- $(HOME)/.config/nvim
-	@cp -pv -- nvim/init.vim $(HOME)/.config/nvim
-	@cp -prv -- nvim/ftdetect $(HOME)/.config/nvim
-	@cp -prv -- nvim/ftplugin $(HOME)/.config/nvim
-	@cp -prv -- nvim/plugin $(HOME)/.config/nvim
-	@cp -prv -- nvim/spell $(HOME)/.config/nvim
+	@mkdir -pv -- $(CONFIG_DIR)/nvim
+	@cp -pv -- nvim/init.vim $(CONFIG_DIR)/nvim
+	@cp -prv -- nvim/ftdetect $(CONFIG_DIR)/nvim
+	@cp -prv -- nvim/ftplugin $(CONFIG_DIR)/nvim
+	@cp -prv -- nvim/plugin $(CONFIG_DIR)/nvim
+	@cp -prv -- nvim/spell $(CONFIG_DIR)/nvim
 
 .PHONY: install-ssh
 install-ssh:
 	@mkdir -pv -- $(HOME)/.ssh
-	@cp -pv -- ssh/config $(HOME)/.ssh/config
+	@cp -pv -- ssh $(HOME)/.ssh
 	@chmod -v -- 0700 $(HOME)/.ssh
-	@chmod -v -- 0600 $(HOME)/.ssh/config
+	@chmod -v -- 0600 $(HOME)/.ssh
 

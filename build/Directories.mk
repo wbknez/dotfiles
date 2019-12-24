@@ -1,5 +1,9 @@
 .POSIX:
 
+CACHE_DIR = $(HOME)/.cache
+CONFIG_DIR = $(HOME)/.config
+DATA_DIR = $((HOME)/.local/share
+
 .PHONY: directories-home
 directories-home:
 	@mkdir -pv -- $(HOME)/Apps
@@ -10,6 +14,6 @@ directories-home:
 
 .PHONY: directories-xdg
 directories-xdg:
-	@mkdir -pv -- $(HOME)/.cache
-	@mkdir -pv -- $(HOME)/.config
-	@mkdir -pv -- $(HOME)/.local/share
+	@mkdir -pv -- $(CACHE_DIR)
+	@mkdir -pv -- $(CONFIG_DIR)
+	@mkdir -pv -- $(DATA_DIR)

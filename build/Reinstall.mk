@@ -1,7 +1,7 @@
 .POSIX:
 
 .PHONY: reinstall-fish
-reinstall-git: clean-fish install-fish
+reinstall-fish: clean-fish install-fish
 
 .PHONY: reinstall-git
 reinstall-git: clean-git install-git
