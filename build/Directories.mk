@@ -2,7 +2,7 @@
 
 CACHE_DIR = $(HOME)/.cache
 CONFIG_DIR = $(HOME)/.config
-DATA_DIR = $((HOME)/.local/share
+DATA_DIR = $(HOME)/.local/share
 
 .PHONY: directories-home
 directories-home:
