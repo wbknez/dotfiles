@@ -12,12 +12,14 @@ install-fish: directories-xdg
 
 .PHONY: install-git
 install-git:
-	@cp -pv -- git/gitignore.global $(HOME)/.gitignore.global
+	@mkdir -pv -- $(CONFIG_DIR)/git
+	@cp -pv -- git/gitignore.global $(CONFIG_DIR)/git/gitignore.global
 	@m4 -EQ \
 		-DNAME=$(NAME) \
-		-DEMAIL=$(EMAIL) -- \
-		git/gitconfig.m4 > $(HOME)/.gitconfig && \
-		echo "'git/gitconfig.m4' -> '$(HOME)/.gitconfig'"
+		-DEMAIL=$(EMAIL) \
+		-DGIT_CONFIG_DIR=$(CONFIG_DIR)/git -- \
+		git/config.m4 > $(CONFIG_DIR)/git/config && \
+		echo "'git/config.m4' -> '$(CONFIG_DIR)/git/config'"
 
 .PHONY: install-nvim
 install-nvim: directories-xdg

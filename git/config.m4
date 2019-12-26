@@ -1,5 +1,6 @@
 define(NAME)dnl
 define(EMAIL)dnl
+define(GIT_CONFIG_DIR)dnl
 [alias]
 	addremove = !git add . && git add -u
 
@@ -37,10 +38,10 @@ define(EMAIL)dnl
 	editor = nvim 
 	autocrlf = false
 	safecrlf = true
-	excludesfile = ~/.gitignore.global
+	excludesfile = GIT_CONFIG_DIR/gitignore.global
 
 [include]
-	path = ~/.gitconfig.local
+	path = GIT_CONFIG_DIR/config.local
 
 [push]
 	default = current

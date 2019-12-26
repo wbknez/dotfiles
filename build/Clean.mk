@@ -2,18 +2,17 @@
 
 .PHONY: clean-git
 clean-git:
-	@rm -fv $(HOME)/.gitconfig
-	@rm -fv $(HOME)/.gitignore.global
+	@rm -frv $(CONFIG_DIR)/git
 
 .PHONY: clean-fish
 clean-fish:
-	@rm -frv $(HOME)/.config/fish
+	@rm -frv $(CONFIG_DIR)/fish
 
 .PHONY: clean-nvim
 clean-nvim:
-	@rm -frv $(HOME)/.config/nvim
+	@rm -frv $(CONFIG_DIR)/nvim
 
 .PHONY: clean-ssh
 clean-ssh:
-	@rm -frv $(HOME)/.ssh
+	@rm -frv $(CONFIG_DIR)/ssh
 
