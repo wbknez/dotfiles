@@ -12,3 +12,6 @@ reinstall-nvim: clean-nvim install-nvim
 .PHONY: reinstall-ssh
 reinstall-ssh: clean-ssh install-ssh
 
+.PHONY: reinstall-tmux
+reinstall-tmux: clean-tmux install-tmux
+

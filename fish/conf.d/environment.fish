@@ -17,7 +17,7 @@ set -g -x BIN_DIR "$HOME/bin"
 
 # User applications.
 set -g -x CONDA_HOME "$APP_DIR/Conda"
-set -g -x GIMP2_DIRECTORY="$XDG_CONFIG_HOME/gimp"
+set -g -x GIMP2_DIRECTORY "$XDG_CONFIG_HOME/gimp"
 set -g -x GNUPGHOME "$XDG_CONFIG_HOME/gnupg"
 set -g -x GRADLE_HOME "$APP_DIR/Gradle"
 set -g -x M2_HOME "$APP_DIR/Maven"

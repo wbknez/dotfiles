@@ -21,6 +21,12 @@ install-git:
 		git/config.m4 > $(CONFIG_DIR)/git/config && \
 		echo "'git/config.m4' -> '$(CONFIG_DIR)/git/config'"
 
+.PHONY: install-tmux
+install-tmux: directories-xdg
+	@mkdir -pv -- $(CONFIG_DIR)/tmux
+	@mkdir -pv -- $(RUNTIME_DIR)/tmux
+	@cp -pv -- tmux/tmux.conf $(CONFIG_DIR)/tmux/tmux.conf
+
 .PHONY: install-nvim
 install-nvim: directories-xdg
 	@mkdir -pv -- $(CONFIG_DIR)/nvim
