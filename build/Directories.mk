@@ -8,6 +8,7 @@ RUNTIME_DIR = $(XDG_RUNTIME_DIR)
 .PHONY: directories-home
 directories-home:
 	@mkdir -pv -- $(HOME)/Apps
+	@mkdir -pv -- $(HOME)/bin
 	@mkdir -pv -- $(HOME)/Build
 	@mkdir -pv -- $(HOME)/Documents
 	@mkdir -pv -- $(HOME)/Downloads
