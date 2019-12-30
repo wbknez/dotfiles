@@ -3,6 +3,16 @@
 NAME = 'Will Knez'
 EMAIL = 'wbknez.devgmail.com'
 
+.PHONY: install-conda
+install-conda: directories-home
+	$(eval CONDA_WORK = $(shell mktemp -d))
+	@mkdir -pv -- $(CONFIG_DIR)/conda
+	@wget -O "$(CONDA_WORK)/miniconda.sh" -- \
+		https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh 
+	@bash -- "$(CONDA_WORK)/miniconda.sh" -b -p "$(HOME)/Apps/Conda"
+	@cp -pv -- conda/condarc $(CONFIG_DIR)/conda
+	@rm -frv -- $(CONDA_WORK)
+
 .PHONY: install-fish
 install-fish: directories-xdg
 	@mkdir -pv -- $(CONFIG_DIR)/fish

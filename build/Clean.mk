@@ -1,12 +1,17 @@
 .POSIX:
 
-.PHONY: clean-git
-clean-git:
-	@rm -frv -- $(CONFIG_DIR)/git
+.PHONY: clean-conda
+clean-conda:
+	@rm -frv -- $(CONFIG_DIR)/conda
+	@rm -frv -- $(HOME)/Apps/Conda
 
 .PHONY: clean-fish
 clean-fish:
 	@rm -frv -- $(CONFIG_DIR)/fish
+
+.PHONY: clean-git
+clean-git:
+	@rm -frv -- $(CONFIG_DIR)/git
 
 .PHONY: clean-nvim
 clean-nvim:

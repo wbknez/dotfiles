@@ -1,5 +1,8 @@
 .POSIX:
 
+.PHONY: reinstall-conda
+reinstall-conda: clean-conda install-conda
+
 .PHONY: reinstall-fish
 reinstall-fish: clean-fish install-fish
 
