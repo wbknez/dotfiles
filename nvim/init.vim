@@ -34,8 +34,12 @@ function! PackConfigure() abort
     " Additional packages.
     "
     " Languages.
-    call PackAdd('elixir-editors/vim-elixir') " Elixir support.
-    call PackAdd('dag/vim-fish')              " Fish shell support.
+    call PackAdd('octol/vim-cpp-enhanced-highlight') " C++1x support.
+    call PackAdd('elixir-editors/vim-elixir')        " Elixir support.
+    call PackAdd('dag/vim-fish')                     " Fish shell support.
+    call PackAdd('elzr/vim-json')                    " JSON support.
+    call PackAdd('JuliaEditorSupport/julia-vim')     " Julia support.
+    call PackAdd('vim-python/python-syntax')         " Python support.
 
     " Typography.
     call PackAdd('tpope/vim-commentary') " Enable/disable block commenting.
