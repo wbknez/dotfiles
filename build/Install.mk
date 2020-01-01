@@ -31,11 +31,11 @@ install-git:
 		git/config.m4 > $(CONFIG_DIR)/git/config && \
 		echo "'git/config.m4' -> '$(CONFIG_DIR)/git/config'"
 
-.PHONY: install-tmux
-install-tmux: directories-xdg
-	@mkdir -pv -- $(CONFIG_DIR)/tmux
-	@mkdir -pv -- $(RUNTIME_DIR)/tmux
-	@cp -pv -- tmux/tmux.conf $(CONFIG_DIR)/tmux/tmux.conf
+.PHONY: install-kitty
+install-kitty:
+	@mkdir -pv -- $(CONFIG_DIR)/kitty
+	@cp -pv -- kitty/kitty.conf $(CONFIG_DIR)/kitty
+	@cp -prv -- kitty/colors $(CONFIG_DIR)/kitty
 
 .PHONY: install-nvim
 install-nvim: directories-xdg
@@ -45,6 +45,8 @@ install-nvim: directories-xdg
 	@cp -prv -- nvim/ftplugin $(CONFIG_DIR)/nvim
 	@cp -prv -- nvim/plugin $(CONFIG_DIR)/nvim
 	@cp -prv -- nvim/spell $(CONFIG_DIR)/nvim
+	@git clone -v -- https://github.com/k-takata/minpac.git \
+		$(CONFIG_DIR)/nvim/pack/minpac/opt/minpac
 
 .PHONY: install-ssh
 install-ssh:
@@ -52,4 +54,11 @@ install-ssh:
 	@cp -pv -- ssh $(HOME)/.ssh
 	@chmod -v -- 0700 $(HOME)/.ssh
 	@chmod -v -- 0600 $(HOME)/.ssh
+
+.PHONY: install-tmux
+install-tmux: directories-xdg
+	@mkdir -pv -- $(CONFIG_DIR)/tmux
+	@mkdir -pv -- $(RUNTIME_DIR)/tmux
+	@cp -pv -- tmux/tmux.conf $(CONFIG_DIR)/tmux/tmux.conf
+
 

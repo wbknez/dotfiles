@@ -13,6 +13,10 @@ clean-fish:
 clean-git:
 	@rm -frv -- $(CONFIG_DIR)/git
 
+.PHONY: clean-kitty
+clean-kitty:
+	@rm -frv -- $(CONFIG_DIR)/kitty
+
 .PHONY: clean-nvim
 clean-nvim:
 	@rm -frv -- $(CONFIG_DIR)/nvim
