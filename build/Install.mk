@@ -37,6 +37,11 @@ install-kitty:
 	@cp -pv -- kitty/kitty.conf $(CONFIG_DIR)/kitty
 	@cp -prv -- kitty/colors $(CONFIG_DIR)/kitty
 
+.PHONY: install-npm
+install-npm:
+	@mkdir -pv -- $(CONFIG_DIR)/npm
+	@cp -pv -- npm/npmrc $(CONFIG_DIR)/npm
+
 .PHONY: install-nvim
 install-nvim: directories-xdg
 	@mkdir -pv -- $(CONFIG_DIR)/nvim

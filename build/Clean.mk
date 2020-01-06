@@ -17,6 +17,11 @@ clean-git:
 clean-kitty:
 	@rm -frv -- $(CONFIG_DIR)/kitty
 
+.PHONY: clean-npm
+clean-npm:
+	@rm -frv -- $(CONFIG_DIR)/npm
+	@rm -frv -- $(DATA_DIR)/npm
+
 .PHONY: clean-nvim
 clean-nvim:
 	@rm -frv -- $(CONFIG_DIR)/nvim

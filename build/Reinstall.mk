@@ -12,6 +12,9 @@ reinstall-git: clean-git install-git
 .PHONY: reinstall-kitty
 reinstall-kitty: clean-kitty install-kitty
 
+.PHONY: reinstall-npm
+reinstall-npm: clean-npm install-npm
+
 .PHONY: reinstall-nvim
 reinstall-nvim: clean-nvim install-nvim
 
