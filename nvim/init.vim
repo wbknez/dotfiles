@@ -47,10 +47,11 @@ function! PackConfigure() abort
     call PackAdd('tpope/vim-surround')   " Surrounding text actions.
 
     " Utilities.
-    call PackAdd('tpope/vim-fugitive')   " Git support.
+    call PackAdd('tpope/vim-fugitive') " Git version control support.
+    call PackAdd('junegunn/fzf.vim')   " Fzf fuzzy searching support.
 
     " Color schemes.
-    call PackAdd('arcticicestudio/nord-vim')
+    call PackAdd('mhartington/oceanic-next') " Oceanic Next.
 endfunction
 
 " Minpac-based commands.
