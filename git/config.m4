@@ -11,11 +11,13 @@ define(GIT_CONFIG_DIR)dnl
 	co = checkout --recurse-submodules
 
 	d = diff
-	di = diff --cached
+	dc = diff --cached
 
 	fo = fetch origin
 	fu = fetch upstream
-	
+
+    lo = log --oneline
+
 	po = push origin
 	pu = push upstream
 
