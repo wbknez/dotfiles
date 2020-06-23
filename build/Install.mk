@@ -1,7 +1,7 @@
 .POSIX:
 
 NAME = 'Will Knez'
-EMAIL = 'wbknez.devgmail.com'
+EMAIL = 'wbknez.dev@gmail.com'
 
 .PHONY: install-conda
 install-conda: directories-home
@@ -52,6 +52,11 @@ install-nvim: directories-xdg
 	@cp -prv -- nvim/spell $(CONFIG_DIR)/nvim
 	@git clone -v -- https://github.com/k-takata/minpac.git \
 		$(CONFIG_DIR)/nvim/pack/minpac/opt/minpac
+
+.PHONY: install-R
+install-R:
+	@mkdir -pv $(DATA_DIR)/R
+
 
 .PHONY: install-ssh
 install-ssh:
