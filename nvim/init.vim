@@ -33,13 +33,19 @@ function! PackConfigure() abort
 
     " Additional packages.
     "
-    " Languages.
+    " Languages (syntax).
     call PackAdd('octol/vim-cpp-enhanced-highlight') " C++1x support.
     call PackAdd('elixir-editors/vim-elixir')        " Elixir support.
     call PackAdd('dag/vim-fish')                     " Fish shell support.
     call PackAdd('elzr/vim-json')                    " JSON support.
     call PackAdd('JuliaEditorSupport/julia-vim')     " Julia support.
     call PackAdd('vim-python/python-syntax')         " Python support.
+
+    " Languages (utilities).
+    call PackAdd('vim-test/vim-test') " Unit testing.
+
+    " Languages (misc-specific).
+    call PackAdd('davidhalter/jedi-vim') " Python autocompletion.
 
     " Typography.
     call PackAdd('tpope/vim-commentary') " Enable/disable block commenting.
@@ -51,7 +57,10 @@ function! PackConfigure() abort
     call PackAdd('junegunn/fzf.vim')   " Fzf fuzzy searching support.
 
     " Color schemes.
-    call PackAdd('mhartington/oceanic-next') " Oceanic Next.
+    call PackAdd('mhartington/oceanic-next')    " Oceanic Next.
+    call PackAdd('NLKNguyen/papercolor-theme')  " Paper Color.
+    call PackAdd('vim-scripts/fruity.vim')      " Fruity.
+    call PackAdd('rakr/vim-one')                " Vim One.
 endfunction
 
 " Minpac-based commands.
