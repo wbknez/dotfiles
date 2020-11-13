@@ -57,10 +57,8 @@ function! PackConfigure() abort
     call PackAdd('junegunn/fzf.vim')   " Fzf fuzzy searching support.
 
     " Color schemes.
-    call PackAdd('mhartington/oceanic-next')    " Oceanic Next.
+    call PackAdd('ayu-theme/ayu-vim')           " Ayu.
     call PackAdd('NLKNguyen/papercolor-theme')  " Paper Color.
-    call PackAdd('vim-scripts/fruity.vim')      " Fruity.
-    call PackAdd('rakr/vim-one')                " Vim One.
 endfunction
 
 " Minpac-based commands.

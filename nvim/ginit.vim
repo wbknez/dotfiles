@@ -5,5 +5,8 @@ if exists('g:GtkGuiLoaded')
     GuiFont Fira Code Medium:h16
 endif
 
-set background=light    " Enable light background.
-colorscheme PaperColor  " Paper Color (!).
+try
+    set background=dark " Enable dark background.
+    colorscheme ayu     " Ayu (!).
+catch
+endtry

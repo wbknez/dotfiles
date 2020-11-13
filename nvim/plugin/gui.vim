@@ -5,6 +5,9 @@ if has('termguicolors')
 endif
 
 if !exists('g:GtkGuiLoaded')
-    set background=dark     " Enable dark background.
-    colorscheme OceanicNext " Oceanic Next (!).
+    try
+        set background=dark     " Enable dark background.
+        colorscheme OceanicNext " Oceanic Next (!).
+    catch
+    endtry
 endif
