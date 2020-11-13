@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Minecraft
+Comment=
+Path=$HOME/Apps/Minecraft
+Exec=minecraft-launcher
+Icon=minecraft.png
+Terminal=false
+Categories=Game;Java;
