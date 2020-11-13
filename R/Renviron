@@ -1,0 +1,4 @@
+# Summary: Initializes all relevant R environment variables.
+
+R_LIBS_USER = "~/.local/share/R"
+R_PDFVIEWER = "xdg-open"
