@@ -46,6 +46,9 @@ install-npm:
 install-nvim: directories-xdg
 	@mkdir -pv -- $(CONFIG_DIR)/nvim
 	@cp -pv -- nvim/init.vim $(CONFIG_DIR)/nvim
+	@cp -pv -- nvim/ginit.vim $(CONFIG_DIR)/nvim
+	@cp -prv -- nvim/after $(CONFIG_DIR)/nvim
+	@cp -prv -- nvim/colors $(CONFIG_DIR)/nvim
 	@cp -prv -- nvim/ftdetect $(CONFIG_DIR)/nvim
 	@cp -prv -- nvim/ftplugin $(CONFIG_DIR)/nvim
 	@cp -prv -- nvim/plugin $(CONFIG_DIR)/nvim
@@ -56,7 +59,7 @@ install-nvim: directories-xdg
 .PHONY: install-R
 install-R:
 	@mkdir -pv $(DATA_DIR)/R
-
+	@cp -pv -- R/Renviron $(HOME)/.Renviron
 
 .PHONY: install-ssh
 install-ssh:

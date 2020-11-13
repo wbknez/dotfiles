@@ -8,6 +8,7 @@ clean-conda:
 .PHONY: clean-fish
 clean-fish:
 	@rm -frv -- $(CONFIG_DIR)/fish
+	@rm -frv -- $(DATA_DIR)/fish
 
 .PHONY: clean-git
 clean-git:
@@ -25,6 +26,7 @@ clean-npm:
 .PHONY: clean-nvim
 clean-nvim:
 	@rm -frv -- $(CONFIG_DIR)/nvim
+	@rm -frv -- $(DATA_DIR)/nvim
 
 .PHONY: clean-tmux
 clean-tmux:
